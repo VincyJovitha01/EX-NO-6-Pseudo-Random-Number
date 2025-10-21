@@ -11,7 +11,42 @@ Pass the value for number of iterations and print the numbers.
 End the program.
 
 # PROGRAM:
+```
+//NAME: VINCY JOVITHA V
+//REG NO: 212223230242
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
+int main()
+{
+    int count, min, max;
+
+    printf("Enter the number of random numbers to generate: ");
+    scanf("%d", &count);
+
+    printf("Enter the minimum value: ");
+    scanf("%d", &min);
+
+    printf("Enter the maximum value: ");
+    scanf("%d", &max);
+
+    // Seed the random number generator with current time
+    srand(time(NULL));
+
+    printf("Pseudorandom numbers:\n");
+
+    for (int i = 0; i < count; i++)
+    {
+        int random_number = (rand() % (max - min + 1)) + min;
+        printf("%d\n", random_number);
+    }
+
+    return 0;
+}
+```
 # OUTPUT:
+<img width="625" height="342" alt="image" src="https://github.com/user-attachments/assets/5050c1ae-0fca-4f71-b637-3b6e41457fb6" />
 
 # RESULT:
+The program was executed successfully.
